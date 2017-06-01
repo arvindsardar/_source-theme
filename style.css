@@ -1,6 +1,7 @@
 /* @override 
 	http://sandbox.dev/wp-content/themes/_source/style.css?ver=4.7.4
-	http://sandbox.dev/wp-content/themes/_source/style.css?ver=4.7.5 */
+	http://sandbox.dev/wp-content/themes/_source/style.css?ver=4.7.5
+	http://source.dev/wp-content/themes/_source/style.css?ver=4.7.5 */
 
 /*
 Theme Name: _source
@@ -104,18 +105,15 @@ html {font-family: sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adj
 
 /* @group ANIMATE
 ------------------------------------------- */
-@keyframes fadein {
-	0%		{opacity: 0;}
-	100%	{opacity: 1;}
+@keyframes loadContent {
+	0%	{transform: translate(0px,-30px);opacity: 0;}
+	30%	{transform: translate(0px,0px);}
+	100%{opacity: 1;}	
 }
-@keyframes fadeinout {
-	0%		{opacity: 1;}
-	50%		{opacity: 0.5;}
-	100%	{opacity: 1;}
-}
+
+
 #content{
-	animation-name: fadein;
-	animation-duration: 2s;
+	animation: loadContent 2000ms;
 }
 /* @end */
 
