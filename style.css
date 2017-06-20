@@ -1,7 +1,5 @@
 /* @override 
-	http://sandbox.dev/wp-content/themes/_source/style.css?ver=4.7.4
-	http://sandbox.dev/wp-content/themes/_source/style.css?ver=4.7.5
-	http://source.dev/wp-content/themes/_source/style.css?ver=4.7.5 */
+	http://master-wp.dev/wp-content/themes/_source/style.css?ver=4.8 */
 
 /*
 Theme Name: _source
@@ -13,46 +11,26 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: _source
-Tags:
+*/
 
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
---------------------------------------------------------------*/
 
-/* @group NORMALIZE
-------------------------------------------- */
+/* @group NORMALISE 
+=========================================== */
+
 html {font-family: sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adjust:     100%; } body {margin: 0; } article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {display: block; } audio, canvas, progress, video {display: inline-block; vertical-align: baseline; } audio:not([controls]) {display: none; height: 0; } [hidden], template {display: none; } a {background-color: transparent; } a:active, a:hover {outline: 0; } abbr[title] {border-bottom: 1px dotted; } b, strong {font-weight: bold; } dfn {font-style: italic; } h1 {font-size: 2em; margin: 0.67em 0; } mark {background: #ff0; color: #000; } small {font-size: 80%; } sub, sup {font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; } sup {top: -0.5em; } sub {bottom: -0.25em; } img {border: 0; } svg:not(:root) {overflow: hidden; } figure {margin: 1em 40px; } hr {box-sizing: content-box; height: 0; } pre {overflow: auto; } code, kbd, pre, samp {font-family: monospace, monospace; font-size: 1em; } button, input, optgroup, select, textarea {color: inherit; font: inherit; margin: 0; } button {overflow: visible; } button, select {text-transform: none; } button, html input[type="button"], input[type="reset"], input[type="submit"] {-webkit-appearance: button; cursor: pointer; } button[disabled], html input[disabled] {cursor: default; } button::-moz-focus-inner, input::-moz-focus-inner {border: 0; padding: 0; } input {line-height: normal; } input[type="checkbox"], input[type="radio"] {box-sizing: border-box; padding: 0; } input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {height: auto; } input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {-webkit-appearance: none; } fieldset {border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; } legend {border: 0; padding: 0; } textarea {overflow: auto; } optgroup {font-weight: bold; } table {border-collapse: collapse; border-spacing: 0; } td, th {padding: 0; }.clear:before, .clear:after, .entry-content:before, .entry-content:after, .comment-content:before, .comment-content:after, .site-header:before, .site-header:after, .site-content:before, .site-content:after, .site-footer:before, .site-footer:after {content: ""; display: table; table-layout: fixed; } .clear:after, .entry-content:after, .comment-content:after, .site-header:after, .site-content:after, .site-footer:after {clear: both; }
 /* @end */
 
 /* @group UTILITY CLASSES
+=========================================== */
+
+/* FULL WIDTH DIVS
 ------------------------------------------- */
-/*FULL WIDTH DIVS*/
 .full-width {
     box-sizing: border-box;
     position: relative;
     width: 100vw;
     left: calc(-50vw + 50%);
 }
-
 .full-width-in-grid{
     position: relative;
 }
@@ -70,7 +48,9 @@ html {font-family: sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adj
     z-index: -1;
 }
 
-/*SPACERS*/
+
+/* SPACERS
+------------------------------------------- */
 .spacer-10{height:10px;}
 .spacer-20{height:20px;}
 .spacer-30{height:30px;}
@@ -83,7 +63,8 @@ html {font-family: sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adj
 .spacer-100{height:100px;}
 
 
-/*ALIGMENTS*/
+/* ALIGMENTS
+------------------------------------------- */
 .alignleft {
 	display: inline;
 	float: left;
@@ -100,11 +81,10 @@ html {font-family: sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adj
 	margin-left: auto;
 	margin-right: auto;
 }
-
 /* @end */
 
 /* @group ANIMATE
-------------------------------------------- */
+=========================================== */
 @keyframes loadContent {
 	0%	{transform: translate(0px,-30px);opacity: 0;}
 	30%	{transform: translate(0px,0px);}
@@ -114,13 +94,16 @@ html {font-family: sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adj
 
 #content{
 	animation: loadContent 2000ms;
+	margin-bottom: 30px;
 }
 /* @end */
 
 
 /* @group LAYOUT
+=========================================== */
+
+/* GLOBAL
 ------------------------------------------- */
-/*global*/
 .inner {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -128,36 +111,75 @@ html {font-family: sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adj
 	padding-left: 15px;
 }
 
-/*page top widgets*/
+/* PAGE TOP WIDGETS
+------------------------------------------- */
 #page-top-widgets {
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
-/*header*/
+/* HEADER
+------------------------------------------- */
 #masthead {
 	margin-bottom: 30px;
 }
 #masthead #site-branding{
-	padding-top: 15px;
-	padding-bottom: 15px;
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
 #masthead #site-branding #logo{
 	width: 250px;
+	margin-right: auto;
+	margin-left: auto;
 }
 #masthead #site-navigation {
-	background-color: #181818;
+	background-color: #112975;
 }
-aside#secondary.widget-area.col-md-3 {
+aside#secondary {
 	min-width: 350px;
+	border-left: 1px solid silver;
 }
 
-/*footer*/
+/* FOOTER
+------------------------------------------- */
 footer.site-footer{
 	padding-top: 45px;
 	padding-bottom: 45px;
-	background-color: #171817;
+	background-color: #102974;
 	color: silver;
+	font-size: 85%;
+}
+footer img.footer-logo{
+	width: 200px;
+	margin-bottom: 15px;
+}
+footer .site-map h2{
+	margin-top: 0;
+}
+footer .site-map ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+footer .site-map ul ul{
+	font-size: 90%;
+}
+footer .site-map ul ul li:before{
+	content: "\00bb";
+	display: inline;
+	padding-right: 5px;
+	font-size: 18px;
+	line-height: 0;
+}
+
+footer ul.menu a{
+	color: white;
+}
+footer ul.menu a:hover{
+	text-decoration: underline;
+}
+footer .legals{
+	text-align: right;
 }
 /* @end */
 
@@ -170,7 +192,7 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: Montserrat,sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -183,6 +205,8 @@ h4,
 h5,
 h6 {
 	clear: both;
+	font-weight: normal;
+	line-height: 1;
 }
 h1.entry-title{
 	margin-top: 0;
@@ -243,9 +267,8 @@ big {
 	font-size: 125%;
 }
 
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
+/* ELEMENTS
+------------------------------------------- */
 html {
 	box-sizing: border-box;
 	overflow-x: hidden;
@@ -325,11 +348,10 @@ table {
 /* @end */
 
 /* @group NAVIGATION
-------------------------------------------- */
+=========================================== */
 
-/*--------------------------------------------------------------
-## Links
---------------------------------------------------------------*/
+/* LINKS
+------------------------------------------- */
 a {
 	color: royalblue;
 	text-decoration: none;
@@ -354,88 +376,77 @@ a:active {
 	outline: 0;
 }
 
-/*--------------------------------------------------------------
-## Menus
---------------------------------------------------------------*/
-.main-navigation{
+
+/* MENUS
+------------------------------------------- */
+ul#primary-menu  {
+	margin: 0;
+	padding: 0;	
 	-webkit-transition: all 1s ease;
 	transition: all 1s ease;
 }
-.main-navigation ul {
-	display: none; /*on small screen sizes*/
-	list-style: none;
-	margin: 0;
-	padding-left: 0;	
-}
-
-.main-navigation li {
-	float: left;
+ul#primary-menu > li {
 	position: relative;
-}
-
-.main-navigation a {
+	list-style: none;
 	display: block;
+}
+ul#primary-menu > li > a{
 	text-decoration: none;
+	padding: 12px 16px;
+	color: #8da5ed;
+	text-transform: uppercase;
+	font-size: 14px;
+	display: inline-block;
 }
-
-.main-navigation #primary-menu > li > a{
-	padding: 20px 16px;
-	color: silver;
-}
-
-.main-navigation #primary-menu > li > a:hover{
+ul#primary-menu > li > a:hover{
 	background-color: rgba(64, 104, 225, 0.75);
 	color: white;
 }
-
-.main-navigation ul.sub-menu {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
+ul#primary-menu ul.sub-menu {
 	position: absolute;
-	top: 64px;
 	left: -999em;
 	z-index: 99999;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	top: 45px;
+	text-align: left;
 }
-
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.main-navigation ul.sub-menu a {
+ul#primary-menu ul.sub-menu a {
 	width: 200px;
 	padding: 12px;
 	background-color:royalblue;
 	color: white;
+	display: inline-block;
 }
-.main-navigation ul ul a:hover{
+ul#primary-menu ul a:hover{
 	background-color: #1d45bb;
 	
 }
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
+ul#primary-menu li:hover > ul.sub-menu,
+ul#primary-menu li.focus > ul.sub-menu {
+	left: 0;
 }
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
-}
-
-.main-navigation #primary-menu > li.current_page_item > a,
-.main-navigation #primary-menu > li.current-menu-item > a,
-.main-navigation #primary-menu > li.current_page_ancestor > a,
-.main-navigation #primary-menu > li.current-menu-ancestor > a {
+ul#primary-menu > li.current_page_item > a,
+ul#primary-menu > li.current-menu-item > a,
+ul#primary-menu > li.current_page_ancestor > a,
+ul#primary-menu > li.current-menu-ancestor > a {
 	background-color: royalblue;
 	color: white;
 }
 
-/* Small menu. */
+
+/* SMALL MENU
+------------------------------------------- */
 /* TABLETS & Smaller ------------------------- */
 	@media only screen and (max-width: 768px){
-		/*button.menu-toggle*/
+		ul#primary-menu  {
+			display: none; /*on small screen sizes*/
+		}
+		
+		/*button*/
 		button.menu-toggle{
-			border-radius: 0;
+			display: block;
 			margin-top: 5px;
 			margin-bottom: 5px;
 			margin-left: 0;
@@ -447,49 +458,35 @@ a:active {
 			box-shadow: inset 0 0 0 20px #FFF;
 			color: black;
 		}
-		.menu-toggle{
-			display: block;
-		}
 		
 		/*.main-navigation.toggled*/
-		.main-navigation.toggled{
-			
-		}
 		.main-navigation.toggled ul#primary-menu{
 			display: block;
-			padding-bottom: 50px;
+			text-align: left;
+			padding: 10px;
 		}
 		.main-navigation.toggled ul#primary-menu li {
 			width: 100%;
-			float: none;
-			clear: both;
 		}
 		.main-navigation.toggled ul#primary-menu li a{
 			padding: 5px 0 5px 10px;
+			display: block;
+			background-color: transparent;
 		}
-		.main-navigation.toggled ul#primary-menu ul ul {
-		       display:block;
-		       width:100%;
-		       float:none;
-		       position: relative;
-		       top:inherit;
-		       box-shadow:none;
-		       height:auto;
-		       margin:0;
+		.main-navigation.toggled ul#primary-menu li a:hover{
+			background-color: black;
 		}
-		.main-navigation.toggled ul.sub-menu{
+		.main-navigation.toggled ul#primary-menu ul.sub-menu{
 			display: block;
 			box-shadow: none;
 			position: static;
-			width: 100%;
-			padding-left: 20px;
+			height:auto;
+			margin: 0 0 0 20px;
 		}
-		.main-navigation.toggled ul.sub-menu li a{
+		.main-navigation.toggled ul#primary-menu ul.sub-menu li a{
 			width: 100%;
 			display: block;
-			background-color: transparent;
-			font-size: 75%;
-			text-transform: uppercase;
+			font-size: 85%;
 			opacity: 0.6;
 		}
 		.main-navigation.toggled ul.sub-menu li a:hover{
@@ -502,15 +499,17 @@ a:active {
 		.menu-toggle {
 			display: none;
 		}
-		.main-navigation ul {
-			display: block;
+		ul#primary-menu {
+			display: flex; display: -webkit-box; display: -ms-flexbox; 
+			flex-direction: row;-webkit-box-direction: normal; -ms-flex-direction: row; -webkit-box-orient: horizontal;
+			justify-content: center;-webkit-box-pack: center;-ms-flex-pack: center;
 		}
 	}
 
 /* @end */
 
 /* @group ACCESSIBILITY
-------------------------------------------- */
+=========================================== */
 /* Text meant only for screen readers. */
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
@@ -541,8 +540,8 @@ a:active {
 	z-index: 100000; /* Above WP toolbar. */
 }
 
-/* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
+	/* Do not show the outline on the skip link target. */
 	outline: 0;
 }
 /* @end */
@@ -550,36 +549,37 @@ a:active {
 
 
 /* @group WIDGETS
-------------------------------------------- */
+=========================================== */
 aside#secondary.widget-area .widget {
-	margin: 0 0 1.5em;
-	padding: 10px;
-	background-color: #f2f2f2;
+	margin: 0 0 10px;
+	padding: 10px 10px 20px;
+	border-bottom: 1px dotted silver;
 }
 h2.widget-title {
-	font-size: 18px;
-	margin: -10px -10px 10px;
+	font-size: 15px;
 	line-height: 1;
-	background-color: #dfdfdf;
-	padding: 10px;
+	font-weight: normal;
+	font-style: normal;
+	margin: 0 0 10px;
 }
-
 aside#secondary.widget-area ul {
 	margin: 0;
+	padding-left: 16px;
+	font-size: 13px;
 }
 
-/* Make sure select elements fit in widgets. */
 .widget select {
+	/* Make sure select elements fit in widgets. */
 	max-width: 100%;
 }
 /* @end */
 
 
 /* @group CONTENT
+=========================================== */
+
+/* POSTS AND PAGES
 ------------------------------------------- */
-/*--------------------------------------------------------------
-## Posts and pages
---------------------------------------------------------------*/
 .sticky {
 	display: block;
 }
@@ -609,17 +609,18 @@ aside#secondary.widget-area ul {
 	margin: 0 0 1.5em;
 }
 
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-/* Make sure embeds and iframes fit their containers. */
+/* MEDIA
+   ensure media elements fit containers
+------------------------------------------- */
 embed,
 iframe,
 object {
 	max-width: 100%;
 }
 
-/*make videos responsive -- add video-container class around the element*/
+/* MAKE VIDEOS RESPONSIVE
+   add video-container class around element
+------------------------------------------- */
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -635,22 +636,10 @@ object {
     height: 100%;
 }
 
-/*TESTIMONIALS*/
-.testimonial-item{
-	margin-bottom: 50px;
-}
-.testimonial-text p{
-	margin-bottom: 5px;
-}
-.testimonial-author{
-	font-size: 14px;
-	font-style: italic;
-	text-indent: 30px;
-}
 /* @end */
 
 /* @group FORMS
-------------------------------------------- */
+=========================================== */
 .button,
 button,
 input[type="button"],
@@ -677,7 +666,7 @@ input[type="submit"]:hover {
 	box-shadow: inset 0 0 0 20px #153185;
 }
 
-.button:focus,
+.button:focus,,
 button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
@@ -754,18 +743,18 @@ textarea {
 
 
 /* @group ACCORDIONS
-------------------------------------------- */
+=========================================== */
 .ui-accordion .ui-accordion-header:before{
 	content: url(images/right_arrow.svg);
 	position: relative;
 	top: 3px;
 	margin: 0 20px 0 0;
 }
-
 /* @end */
 
-/* @GROUP SLICK SLIDER
-------------------------------------------- */
+
+/* @group SLICK SLIDER
+=========================================== */
 .slider-image.slick-slide{
 	overflow: hidden;
 	height: 40vw;

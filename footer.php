@@ -14,12 +14,12 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="inner">
-			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', '_source' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', '_source' ), 'WordPress' ); ?></a>
-				<span class="sep"> | </span>
-				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', '_source' ), '_source', '<a href="https://automattic.com/" rel="designer">Underscores.me</a>' ); ?>
-			</div><!-- .site-info -->
+		<div class="inner row">
+			<div class="col-xs-12 col-sm"><a href="/">
+				<img class="footer-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.svg"></a>
+			</div>
+			<div class="col-xs-12 col-sm site-map"><h2>Site Map</h2><?php wp_nav_menu() ?></div>
+			<div class="col-xs-12 col-sm legals">&copy; <?php echo date("Y"); ?> <a href="http://designsupport.com.au">Design Support</a></div>
 		</div> <!-- .inner -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

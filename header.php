@@ -32,7 +32,7 @@
 <!-- Site Branding -->
 		<div id="site-branding">
 			<div class="inner clear">
-				<div id="logo"><a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png"></a></div>
+				<div id="logo"><a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.svg"></a></div>
 				</div> <!-- .inner -->
 		</div><!-- .site-branding -->
 
