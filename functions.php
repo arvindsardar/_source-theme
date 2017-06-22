@@ -70,6 +70,7 @@
 		// styles
 		wp_enqueue_style( 'flexboxgrid-style', get_stylesheet_directory_uri() . '/inc/flexboxgrid.min.css' );
 		wp_enqueue_style( '_source-style', get_stylesheet_uri() );
+		wp_enqueue_style( 'dashicons' );
 	    
 		// scripts
 	    wp_enqueue_script( 'desq-custom-scripts', get_stylesheet_directory_uri() . '/js/custom.js');
