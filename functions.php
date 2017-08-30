@@ -73,8 +73,8 @@
 		wp_enqueue_style( 'dashicons' );
 	    
 		// scripts
-	    wp_enqueue_script( 'desq-custom-scripts', get_stylesheet_directory_uri() . '/js/custom.js');
-		wp_enqueue_script( '_source-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	    wp_enqueue_script( 'desq-custom-scripts', get_stylesheet_directory_uri() . '/js/custom.js', array(jquery), '20170803', true);
+		wp_enqueue_script( '_source-navigation', get_template_directory_uri() . '/js/navigation.js', array(jquery), '20151215', true );
 		wp_enqueue_script( '_source-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
@@ -95,10 +95,13 @@
 	require get_template_directory() . '/inc/customizer.php';
 
 
-	add_action( 'wp_enqueue_scripts', 'desq_flexboxgrid_style' );
-	function desq_flexboxgrid_style() {
-		wp_enqueue_style( 'flexboxgrid-style', plugin_dir_url( __FILE__ ) . 'flexboxgrid.min.css' );
+/* --------------------------------------------- */
+/* ADMIN STYLESHEET
+/* --------------------------------------------- */
+	function admin_style() {
+		wp_enqueue_style('admin-styles', get_stylesheet_directory_uri().'/admin.css');
 	}
+	add_action('admin_enqueue_scripts', 'admin_style');
 
 
 /* --------------------------------------------- */
